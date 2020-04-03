@@ -1,0 +1,14 @@
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+
+const schema = new Schema({
+name: {type: String, required: true, index: {unique: true}},
+min_density: {type: Number, required: true},
+max_density: {type: Number, required: true},
+min_stregth: {type: Number, required: true},
+max_stregth: {type: Number, required: true},
+
+});
+
+module.exports = mongoose.model("material", Schema);
